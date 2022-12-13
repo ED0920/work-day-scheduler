@@ -2,7 +2,7 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 
-$("iner").wrap(<"div calss");
+// $("iner").wrap(<"div calss");
 
 $(function () {
   // TODO: Add a listener for click events on the save button. This code should
@@ -24,3 +24,9 @@ $(function () {
   //
   // TODO: Add code to display the current date in the header of the page.
 });
+
+let currentDateEl = document.getElementById("currentDay");
+
+var d = new dayjs().format("dddd, MMMM DD");
+
+currentDateEl.innerHTML = d
