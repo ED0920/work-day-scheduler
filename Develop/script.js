@@ -27,6 +27,27 @@ $(function () {
 
 let currentDateEl = document.getElementById("currentDay");
 
+
+// Format date in header to grab current date
 var d = new dayjs().format("dddd, MMMM DD");
 
 currentDateEl.innerHTML = d
+
+// Save button to save text in text area
+// for (var i = 9; i < 18; i++){
+// var savedText =localStorage.getItem("key"+i);
+// document.getElementById("text"+i).value = savedText
+// }
+
+for (let i = 9; i < 18; i++){
+  document.getElementById("saveBtn"+ i).addEventListener("click", function() {
+    console.log("text"+i);
+    console.log(document.getElementById("text"+i));
+  window.localStorage.setItem("key"+i, document.getElementById("text"+i).value)  
+  });
+  var savedText = window.localStorage.getItem("key"+i);
+  document.getElementById("text"+i).value = savedText;
+
+}
+
+
