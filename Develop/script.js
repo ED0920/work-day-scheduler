@@ -7,6 +7,7 @@ var currentHour = currentD.getHours();
 console.log(currentHour);
 currentDateEl.innerHTML = d
 
+// save text to local storage 
 for (let i = 9; i < 18; i++){
   document.getElementById("saveBtn"+ i).addEventListener("click", function() {
     console.log("text"+i);
@@ -17,6 +18,7 @@ for (let i = 9; i < 18; i++){
   document.getElementById("text"+i).value = savedText;
 }
 
+// change colour of text background pending time of day
 for (var i=9; i<18; i++){
   if (i < currentHour){
     document.getElementById("hour-"+i).style.backgroundColor = 'grey'
