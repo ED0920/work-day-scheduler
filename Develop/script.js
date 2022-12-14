@@ -4,7 +4,7 @@
 
 // $("iner").wrap(<"div calss");
 
-$(function () {
+// $(function () {
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
@@ -23,7 +23,7 @@ $(function () {
   // attribute of each time-block be used to do this?
   //
   // TODO: Add code to display the current date in the header of the page.
-});
+// });
 
 let currentDateEl = document.getElementById("currentDay");
 
@@ -31,7 +31,7 @@ let currentDateEl = document.getElementById("currentDay");
 // Format date in header to grab current date
 var d = new dayjs().format("dddd, MMMM DD");
 
-currentDateEl.innerHTML = d
+// currentDateEl.innerHTML = d
 
 // Save button to save text in text area
 // for (var i = 9; i < 18; i++){
@@ -50,4 +50,30 @@ for (let i = 9; i < 18; i++){
 
 }
 
+const currentD = new Date();
+var currentHour = currentD.getHours();
+console.log(currentHour);
 
+// for (var i=9; i<18; i++){
+//   if (i < currentHour){
+//     document.getElementById("hour-"+i).style.backgroundColour = 'grey'
+//   }
+//   if (i === currentHour){
+//     document.getElementById("hour-"+i).style.backgroundColour = "red"
+//   }
+//   if (i > currentHour){
+//     document.getElementById("hour-"+i).style.backgroundColour = 'green'
+//   }
+// }
+
+for (var i=9; i<18; i++){
+  if (i < currentHour){
+    document.getElementById("hour-"+i).style.backgroundColor = 'grey'
+  }
+  if (i === currentHour){
+    document.getElementById("hour-"+i).style.backgroundColor = "red"
+  }
+  if (i > currentHour){
+    document.getElementById("hour-"+i).style.backgroundColor = 'green'
+  }
+}
